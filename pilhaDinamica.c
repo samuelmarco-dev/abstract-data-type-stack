@@ -4,12 +4,12 @@
 
 /*
 Conceito Pilha:
-    O �ltimo a entrar � o primeiro a sair
-    O primeiro a entrar � o �ltimo a sair
+    O último a entrar é o primeiro a sair
+    O primeiro a entrar é o último a sair
 
-Pilha din�mica:
+Pilha dinâmica:
     O primeiro a entrar vai apontar para null
-    E todos os seguintes v�o apontar para o topo anterior
+    E todos os seguintes vão apontar para o topo anterior
 */
 
 typedef struct nodeitem {
@@ -36,7 +36,7 @@ int main() {
     push(stackPtr, 10); //n->next = NULL; s->top = n
     push(stackPtr, 20); //n->next = n; s->top = n1
     push(stackPtr, 30); //n->next = n1; s->top = n2
-    /*� como se estiv�ssemos inserindo elementos (n�s) apenas no in�cio da pilha*/
+    /*É como se estivéssemos inserindo elementos (nós) apenas no início da pilha*/
 
     while(!stackEmpty(stackPtr)) {
         printf("Top: %d\n", top(stackPtr)); //s->top = n: information, next; return s->top->information
@@ -62,10 +62,10 @@ node *newNode(int information) {
 }
 
 /*
-    1. Criar um novo n� e colocar o valor do valor no campo de informa��o do n� criado
-            a. Como este n� est� sendo instanciado, inicialmente aponta para NULL
-    2. Fazer com que o campo pr�ximo do n� criado, aponte para o topo
-    3. Fazer com que o topo receba uma atribui��o para o n� criado
+    1. Criar um novo nó e colocar o valor do valor no campo de informação do nó criado
+            a. Como este nó está sendo instanciado, inicialmente aponta para NULL
+    2. Fazer com que o campo próximo do nó criado, aponte para o topo
+    3. Fazer com que o topo receba uma atribuição para o nó criado
 */
 void push(stack *s, int value) {
     node *n = newNode(value);
@@ -74,10 +74,10 @@ void push(stack *s, int value) {
 }
 
 /*
-    1. Criar um n� para guardar o que est� no topo, o topo ser� acessado de forma direta
-    2. Guardar a informa��o atribuiada a este n� em uma nova vari�vel auxiliar do tipo de dado acessado
-    3. Vou acessar o valor do pr�ximo que est� atribuido ao no, e vou atribui-lo ao topo
-        a. O topo atualizado vai apontar para o topo anterior que est� em n->next
+    1. Criar um nó para guardar o que está no topo, o topo será acessado de forma direta
+    2. Guardar a informação atribuiada a este nó em uma nova variável auxiliar do tipo de dado acessado
+    3. Vou acessar o valor do próximo que está atribuido ao no, e vou atribui-lo ao topo
+        a. O topo atualizado vai apontar para o topo anterior que está em n->next
 */
 int pop(stack *s) {
     if(stackEmpty(s)) {
@@ -101,7 +101,7 @@ int stackEmpty(stack *s) {
 
 int top(stack *s) {
     if(stackEmpty(s)) {
-        printf("A pilha est� vazia no momento. Tente novamente!\n"); //Stack Underflow
+        printf("A pilha está vazia no momento. Tente novamente!\n"); //Stack Underflow
         return;
     }
 
