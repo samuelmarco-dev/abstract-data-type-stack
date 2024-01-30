@@ -54,7 +54,7 @@ stack *newStack() {
 
 void push(stack *s, char value) {
 	if (isStackFull(s)) {
-		printf("PILHA CHEIA - Stack Overflow");
+		printf("Pilha cheia - Stack Overflow");
 		exit(1);
 	}
 
@@ -64,7 +64,7 @@ void push(stack *s, char value) {
 
 char pop(stack *s) {
 	if (isStackEmpty(s)) {
-		printf("Pilha vazi! Stack Underflow");
+		printf("Pilha vazia - Stack Underflow");
 		exit(1);
 	}
 
@@ -74,7 +74,7 @@ char pop(stack *s) {
 
 char top(stack *s) {
 	if (isStackEmpty(s)) {
-		printf("Pilha vazi! Stack Underflow");
+		printf("Pilha vazia - Stack Underflow");
 		return;
 	}
 	

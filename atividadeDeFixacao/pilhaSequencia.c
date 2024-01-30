@@ -25,9 +25,9 @@ int main() {
     stack *s = newStack();
 
 	if (ehBemFormado(texto, s) == 1) {
-		printf("Sequencia È bem formada!\n");
+		printf("Sequencia √© bem formada!\n");
 	} else {
-		printf("Sequencia n„o È bem formada!\n");
+		printf("Sequencia n√£o √© bem formada!\n");
 	}
 
     return 0;
@@ -42,7 +42,7 @@ stack *newStack() {
 
 void push(stack *s, char element) {
     if(isStackFull(s)) {
-        printf("A pilha est· cheia no momento. Tente novamente!\n"); //Stack Overflow
+        printf("A pilha est√° cheia no momento. Tente novamente!\n"); //Stack Overflow
         exit(1);
     }
 
@@ -52,7 +52,7 @@ void push(stack *s, char element) {
 
 char pop(stack *s) {
     if(isStackEmpty(s)) {
-        printf("A pilha est· vazia no momento. Tente novamente!\n"); //Stack Underflow
+        printf("A pilha est√° vazia no momento. Tente novamente!\n"); //Stack Underflow
         exit(1);
     }
 

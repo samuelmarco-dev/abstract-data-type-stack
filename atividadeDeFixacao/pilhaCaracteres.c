@@ -63,7 +63,7 @@ stack *newStack() {
 
 void push(stack *s, char caracter) {
     if(stackFull(s)) {
-        printf("A pilha est� cheia no momento. Tente novamente!\n"); //Stack Overflow
+        printf("A pilha está cheia no momento. Tente novamente!\n"); //Stack Overflow
         exit(1);
     }
 
@@ -75,7 +75,7 @@ void push(stack *s, char caracter) {
 
 char pop(stack *s) {
     if(stackEmpty(s)) {
-        printf("A pilha est� vazia no momento. Tente novamente!\n"); //Stack Underflow
+        printf("A pilha está vazia no momento. Tente novamente!\n"); //Stack Underflow
         exit(1);
     }
 
@@ -86,7 +86,7 @@ char pop(stack *s) {
 
 char top(stack *s) {
     if(stackEmpty(s)) {
-        printf("A pilha est� vazia no momento. Tente novamente!\n"); //Stack Underflow
+        printf("A pilha está vazia no momento. Tente novamente!\n"); //Stack Underflow
         return;
     }
 
